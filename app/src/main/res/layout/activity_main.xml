@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/welcome_res"
+        android:id="@+id/text" />
+
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entrada"
+        android:id="@+id/check_entrada"
+        />
+
+    <RadioGroup
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:id="@+id/rgroup_entrada"
+        android:visibility="invisible"
+       >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sopa"
+            android:id="@+id/entrada1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arroz"
+            android:id="@+id/entrada2" />
+    </RadioGroup>
+
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plato_fuerte"
+        android:id="@+id/check_plato" />
+
+    <RadioGroup
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:id="@+id/rgroup_plato"
+        android:visibility="invisible"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pechuga"
+            android:id="@+id/plato1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bisteck"
+            android:id="@+id/plato2" />
+    </RadioGroup>
+
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bebida"
+        android:id="@+id/check_bebidas" />
+
+    <RadioGroup
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:id="@+id/rgroup_bebidas"
+        android:visibility="invisible"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refresco"
+            android:id="@+id/bebidas1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agua"
+            android:id="@+id/bebidas2" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ordenar"
+        android:gravity="center"
+        android:id="@+id/btn_ordenar" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">restaurante2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_res"> Bienvenido al Restaurante Fresh</string>
+    <string name="entrada">Elije  una entrada</string>
+    <string name="plato_fuerte">Plato Fuerte</string>
+    <string name="bebida">Bebidas</string>
+    <string name="sopa">Sopa</string>
+    <string name="arroz">Arroz</string>
+    <string name="pechuga">Pechega</string>
+    <string name="bisteck">Bisteck</string>
+    <string name="agua">Agua</string>
+    <string name="refresco">Refresco</string>
+    <string name="ordenar">Ordenar</string>
+
+
+
+
+
+</resources>

@@ -1,5 +1,6 @@
 package com.example.davidfresh.restaurante2;
 
+import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,14 +13,21 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import org.w3c.dom.Text;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    public TextView entrada;
 
+
+    String entra1;
+    String entra2;
+    String plat1;
+    String plat2;
+    String bebi1;
+    String bebi2;
 
     CheckBox check_beb;
     CheckBox check_ent;
@@ -27,12 +35,6 @@ public class MainActivity extends ActionBarActivity {
     RadioGroup group_beb;
     RadioGroup group_ent;
     RadioGroup group_pla;
-    RadioButton circle_ent1;
-    RadioButton circle_ent2;
-    RadioButton circle_beb1;
-    RadioButton circle_beb2;
-    RadioButton circle_pla1;
-    RadioButton circle_pla2;
     Button button;
     TextView texto;
 
@@ -97,12 +99,46 @@ public class MainActivity extends ActionBarActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.entrada1:
-
+                    entra1 = getString(R.string.sopa);
                         break;
                     case R.id.entrada2:
+                     entra2 = getString(R.string.arroz);
+                        break;
 
 
+                }
 
+            }
+        });
+
+        group_pla.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.plato1:
+                        plat1 = getString(R.string.pechuga);
+                        break;
+                    case R.id.plato2:
+                        plat2 = getString(R.string.bisteck);
+                        break;
+
+
+                }
+
+            }
+        });
+
+        group_beb.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.bebidas1:
+                        bebi1 = getString(R.string.refresco);
+                        break;
+                    case R.id.bebidas2:
+                        bebi1 = getString(R.string.agua);
                         break;
 
 
@@ -114,8 +150,48 @@ public class MainActivity extends ActionBarActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "sopa",
-                        Toast.LENGTH_SHORT).show();
+                String text = "Tu Ordenaste: ";
+                if (entra1==null){
+                    text = text;
+                }
+                else{
+                    text = text.concat(entra1+", ");
+                }
+                if (entra2==null){
+                    text =text;
+                }
+                else{
+                    text =text.concat(entra2+", ");
+                }
+                if (plat1==null){
+                    text = text;
+                }
+                else{
+                    text = text.concat(plat1+" y ");
+                }
+                if (plat2==null){
+                    text =text;
+                }
+                else{
+                    text = text.concat(plat2+" y ");
+
+                }
+                if (bebi1==null){
+                    text=text;
+                }
+                else{
+                    text = text.concat(bebi1+" ");
+                }
+                if (bebi2==null){
+                    text=text;
+                }
+                else{
+                    text = text.concat(bebi2+" ");
+                }
+
+
+                Toast.makeText(getApplicationContext(), text,
+                        Toast.LENGTH_LONG).show();
             }
         });
 

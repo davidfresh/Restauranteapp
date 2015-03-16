@@ -1,22 +1,16 @@
 package com.example.davidfresh.restaurante2;
 
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
 
-import org.w3c.dom.Text;
-
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -37,11 +31,21 @@ public class MainActivity extends ActionBarActivity {
     RadioGroup group_pla;
     Button button;
     TextView texto;
+    FloatingActionButton floatbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+         Toolbar toolbar = (Toolbar) findViewById(R.id.activity_my_toolbar);
+
+         setSupportActionBar(toolbar);
+
+
+
 
 
         check_ent = (CheckBox) findViewById(R.id.check_entrada);
@@ -50,8 +54,9 @@ public class MainActivity extends ActionBarActivity {
         group_beb = (RadioGroup) findViewById(R.id.rgroup_bebidas);
         group_ent = (RadioGroup) findViewById(R.id.rgroup_entrada);
         group_pla = (RadioGroup) findViewById(R.id.rgroup_plato);
-        button = (Button) findViewById(R.id.btn_ordenar);
+        //button = (Button) findViewById(R.id.btn_ordenar);
         texto = (TextView) findViewById(R.id.text);
+        floatbutton = (FloatingActionButton) findViewById(R.id.btn_float);
 
         check_ent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,7 +152,7 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener() {
+        floatbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String text = "Tu Ordenaste: ";
@@ -197,9 +202,6 @@ public class MainActivity extends ActionBarActivity {
 
 
     }
-
-
-
 
 
 
